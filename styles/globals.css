@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #999;
 }
 
 a {
@@ -15,11 +16,17 @@ a {
   box-sizing: border-box;
 }
 
+ol li, ul li {
+  margin: 0.5rem 0;
+}
+
 .chapters {
   margin: 0 auto;
-  width: 30rem;
+  width: 40rem;
+  min-height: 100vh;
   padding: 1rem;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .drawing-board {
@@ -31,4 +38,5 @@ a {
 
 canvas {
   border: 1px solid #eee;
+  background-color: #fff;
 }

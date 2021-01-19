@@ -8,21 +8,10 @@ function createDrawer(): SketchProps {
   class Walker {
     constructor(private x: number, private y: number) {}
     step() {
-      const r = p.random([0, 1, 2, 3])
-      switch (r) {
-        case 0:
-          this.x++
-          break
-        case 1:
-          this.x--
-          break
-        case 2:
-          this.y++
-          break
-        case 3:
-          this.y--
-          break
-      }
+      const x = p.random([-1, 0, 1])
+      const y = p.random([-1, 0, 1])
+      this.x += x
+      this.y += y
     }
     display() {
       p.stroke(0)
