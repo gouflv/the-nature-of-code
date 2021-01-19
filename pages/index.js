@@ -16,6 +16,9 @@ export default function Home() {
             03 根据鼠标方向的趋势游走
           </Link>
         </li>
+        <li>
+          <Link href='/chapter-0/04-gaussian-random'>04 高斯随机数分布</Link>
+        </li>
       </ul>
     </div>
   )
