@@ -23,9 +23,9 @@ function createDrawer(): SketchProps {
 
       const w = p.width / list.length
 
-      for (let i = 0; i < list.length; i++) {
-        p.rect(w * i, p.height - list[i], w - 1, list[i])
-      }
+      list.forEach((val, i) => {
+        p.rect(w * i, p.height - val, w - 1, val)
+      })
     }
   }
 }
