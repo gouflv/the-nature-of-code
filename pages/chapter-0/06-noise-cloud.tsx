@@ -7,18 +7,21 @@ function createDrawer(): SketchProps {
       p.createCanvas(800, 500).parent(canvas)
 
       let offX = 0,
-        offY = 0
+        offY = 0,
+        c,
+        index
 
       p.loadPixels()
 
       for (let x = 0; x < p.width; x++) {
         offY = 0
         for (let y = 0; y < p.height; y++) {
-          const c = p.color(p.map(p.noise(offX, offY), 0, 1, 0, 255))
-          p.pixels[x + y * p.width] = p.red(c)
-          p.pixels[x + y * p.width + 1] = p.green(c)
-          p.pixels[x + y * p.width + 2] = p.blue(c)
-          p.pixels[x + y * p.width + 3] = 255
+          c = p.color(p.map(p.noise(offX, offY), 0, 1, 0, 255))
+          index = 4 * (x + y * p.width)
+          p.pixels[index] = p.red(c)
+          p.pixels[index + 1] = p.green(c)
+          p.pixels[index + 2] = p.blue(c)
+          p.pixels[index + 3] = 255
           offY += 0.01
         }
         offX += 0.01
