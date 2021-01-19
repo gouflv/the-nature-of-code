@@ -28,7 +28,16 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href='/chapter-0/04-splash'>04 飞溅效果</Link>
+              <Link href='/chapter-0/04-splash'>04-2 飞溅效果</Link>
+            </li>
+            <li>
+              <Link href='/chapter-0/06-noise'>06 噪声</Link>
+            </li>
+            <li>
+              <Link href='/chapter-0/06-noise-walker'>06-2 噪声游走</Link>
+            </li>
+            <li>
+              <Link href='/chapter-0/06-noise-cloud'>06-3 噪声纹理</Link>
             </li>
           </ul>
         </section>
