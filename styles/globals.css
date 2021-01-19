@@ -7,10 +7,28 @@ body {
 }
 
 a {
-  color: inherit;
+  color: royalblue;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.chapters {
+  margin: 0 auto;
+  width: 30rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.drawing-board {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  border: 1px solid #eee;
 }
