@@ -28,7 +28,9 @@ function createDrawer(): SketchProps {
           Math.pow(x - p.width, 2) + Math.pow(y - p.height, 2)
         )
 
-        const s = Math.floor(p.randomGaussian(30, distanceToCenter / 20))
+        const s = Math.floor(
+          p.randomGaussian(distanceToCenter / 10, distanceToCenter / 20)
+        )
         const shape = new Shape(x, y, s)
         shape.display()
       })
