@@ -41,6 +41,27 @@ export default function Home() {
             </li>
           </ul>
         </section>
+
+        <section>
+          <h2>Chapter 1</h2>
+          <ul>
+            <li>
+              <Link href='/chapter-1/03-ball'>03 向量弹球</Link>
+            </li>
+            <li>
+              <Link href='/chapter-1/04-vector-sub'>04 向量相减</Link>
+            </li>
+            <li>
+              <Link href='/chapter-1/07-mover'>07 速度</Link>
+            </li>
+            <li>
+              <Link href='/chapter-1/08-acceleration'>08 加速度</Link>
+            </li>
+            <li>
+              <Link href='/chapter-1/08-car'>08-2 汽车</Link>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
   )
