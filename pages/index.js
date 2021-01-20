@@ -58,7 +58,16 @@ export default function Home() {
               <Link href='/chapter-1/08-acceleration'>08 加速度</Link>
             </li>
             <li>
-              <Link href='/chapter-1/08-car'>08-2 汽车</Link>
+              <Link href='/chapter-1/08-car'>08-2 加速度控制</Link>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Example</h2>
+          <ul>
+            <li>
+              <Link href='/example/01-pieChart'>01 正态分布切分饼图</Link>
             </li>
           </ul>
         </section>
