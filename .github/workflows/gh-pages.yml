@@ -2,7 +2,6 @@ name: Github Pages
 
 on:
   push:
-    paths: ['pages/**']
     branches: [ master ]
 
 jobs:
@@ -18,9 +17,9 @@ jobs:
           npm run build
           
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          clean: true
           target-folder: .next/server/pages
+          clean: true
