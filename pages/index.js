@@ -13,6 +13,7 @@ export default function Home() {
           <ul>
             <li>
               <Link href='/chapter-0/01-walker'>01 传统的随机游走</Link>
+              <code>相同趋势的四向游走</code>
             </li>
             <li>
               <Link href='/chapter-0/02-random'>02 随机数分布</Link>
@@ -21,20 +22,24 @@ export default function Home() {
               <Link href='/chapter-0/03-direction-walker'>
                 03 根据鼠标方向的趋势游走
               </Link>
+              <code>有概率的向鼠标方向游走</code>
             </li>
             <li>
               <Link href='/chapter-0/04-gaussian-random'>
                 04 高斯随机数分布
               </Link>
+              <code>randomGaussian()</code>
             </li>
             <li>
               <Link href='/chapter-0/04-splash'>04-2 飞溅效果</Link>
             </li>
             <li>
               <Link href='/chapter-0/06-noise'>06 噪声</Link>
+              <code>noise()</code>
             </li>
             <li>
               <Link href='/chapter-0/06-noise-walker'>06-2 噪声游走</Link>
+              <code>更自然的四向游走</code>
             </li>
             <li>
               <Link href='/chapter-0/06-noise-cloud'>06-3 噪声纹理</Link>
@@ -56,6 +61,7 @@ export default function Home() {
             </li>
             <li>
               <Link href='/chapter-1/08-acceleration'>08 加速度</Link>
+              <code>弹球碰撞边缘后随机加速方向</code>
             </li>
             <li>
               <Link href='/chapter-1/08-car'>08-2 加速度控制</Link>
@@ -68,6 +74,11 @@ export default function Home() {
           <ul>
             <li>
               <Link href='/example/01-pieChart'>01 正态分布切分饼图</Link>
+              <div>
+                <small>
+                  <i>类似红包分配，可以保证每个切分结果在数值范围内</i>
+                </small>
+              </div>
             </li>
           </ul>
         </section>
