@@ -1,6 +1,8 @@
 import { SketchProps } from 'react-p5'
 import { P5Render } from '../../components/P5Render'
 
+const SP_MIN = 10
+
 function createDrawer(): SketchProps {
   let p: P5
 
@@ -10,10 +12,10 @@ function createDrawer(): SketchProps {
     return arr.reduce((sum, v) => sum + v, 0)
   }
 
-  function splitPie(part: number, base = 360) {
+  function _split(part: number, base = 360) {
     const mean = base / part
     const sd = 20
-    const min = 10
+    const min = SP_MIN
     const max = mean * 2
     const result = []
     Array.from({ length: part - 1 })
@@ -21,7 +23,7 @@ function createDrawer(): SketchProps {
       .forEach((_, i) => {
         while (true) {
           const r = p.randomGaussian(mean, sd)
-          if (r > 0 && r < base && r > min && r < max) {
+          if (r > min && r < max) {
             result[i] = Math.floor(r)
             break
           }
@@ -30,6 +32,15 @@ function createDrawer(): SketchProps {
     result.push(base - sum(result))
     console.log(result)
     return result
+  }
+
+  function splitPie(part: number) {
+    let res
+    while (true) {
+      res = _split(part)
+      if (res[res.length - 1] > SP_MIN) break
+    }
+    return res
   }
 
   function pieChart(r, angles) {
