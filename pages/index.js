@@ -74,6 +74,7 @@ export default function Home() {
           <ul>
             <li>
               <Link href='/chapter-2/04-balloon'>04 气球</Link>
+              <code>物体受合力下的移动</code>
             </li>
           </ul>
         </section>
@@ -83,11 +84,7 @@ export default function Home() {
           <ul>
             <li>
               <Link href='/example/01-pieChart'>01 正态分布切分饼图</Link>
-              <div>
-                <small>
-                  <i>类似红包分配，可以保证每个切分结果在数值范围内</i>
-                </small>
-              </div>
+              <code>类似红包分配，可以保证每个切分结果在数值范围内</code>
             </li>
           </ul>
         </section>

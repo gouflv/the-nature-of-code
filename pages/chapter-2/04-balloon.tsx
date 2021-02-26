@@ -4,15 +4,16 @@ import { P5Render } from '../../components/P5Render'
 function createDrawer(): SketchProps {
   let p: P5
 
-  const G = 9.8 * 0.01,
-    U = -9.9 * 0.01
+  const G = 9.8,
+    U = -9.9,
+    Mass = 100
 
   class Balloon {
     location = p.createVector(p.width / 2, p.height - 10)
     velocity = p.createVector()
     acc: Vector = p.createVector()
-    applyForce(f: Vector) {
-      this.acc.add(f)
+    applyForce(force: Vector) {
+      this.acc.add(force.copy().div(Mass))
     }
     update() {
       this.velocity.add(this.acc)
@@ -44,14 +45,12 @@ function createDrawer(): SketchProps {
       p.createCanvas(800, 500).parent(canvas)
 
       mover = new Balloon()
-      mover.applyForce(p.createVector(0, G))
-      mover.applyForce(p.createVector(0, U))
     },
     draw: () => {
       p.background(255)
       mover.applyForce(p.createVector(0, G))
       mover.applyForce(p.createVector(0, U))
-      mover.applyForce(p.createVector(p.map(p.noise(t), 0, 1, -0.1, 0.1), 0))
+      mover.applyForce(p.createVector(p.map(p.noise(t), 0, 1, -1, 1), 0))
       mover.update()
       mover.display()
       t += 0.01
