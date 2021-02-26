@@ -4,7 +4,7 @@ import { P5Render } from '../../components/P5Render'
 function createDrawer(): SketchProps {
   let p: P5
 
-  let location, velocity
+  let location: Vector, velocity: Vector
 
   return {
     setup: (p5, canvas) => {

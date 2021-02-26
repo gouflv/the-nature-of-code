@@ -5,8 +5,8 @@ function createDrawer(): SketchProps {
   let p: P5
 
   class Mover {
-    location
-    velocity
+    location: Vector
+    velocity: Vector
     constructor() {
       this.location = p.createVector(p.random(p.width), p.random(p.height))
       this.velocity = p.createVector(p.random(-5, 5), p.random(-5, 5))
