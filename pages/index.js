@@ -70,6 +70,15 @@ export default function Home() {
         </section>
 
         <section>
+          <h2>chapter-2</h2>
+          <ul>
+            <li>
+              <Link href='/chapter-2/04-balloon'>04 气球</Link>
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Example</h2>
           <ul>
             <li>
