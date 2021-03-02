@@ -79,6 +79,9 @@ export default function Home() {
             <li>
               <Link href='/chapter-2/05-pinball'>05 重力弹球</Link>
             </li>
+            <li>
+              <Link href='/chapter-2/09-attraction'>09 引力</Link>
+            </li>
           </ul>
         </section>
 
