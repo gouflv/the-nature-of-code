@@ -76,6 +76,9 @@ export default function Home() {
               <Link href='/chapter-2/04-balloon'>04 气球</Link>
               <code>物体受合力下的移动</code>
             </li>
+            <li>
+              <Link href='/chapter-2/05-pinball'>05 重力弹球</Link>
+            </li>
           </ul>
         </section>
 
