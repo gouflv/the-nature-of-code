@@ -89,6 +89,15 @@ export default function Home() {
         </section>
 
         <section>
+          <h2>chapter-3</h2>
+          <ul>
+            <li>
+              <Link href='/chapter-3/02-angle'>角运动</Link>
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Example</h2>
           <ul>
             <li>
