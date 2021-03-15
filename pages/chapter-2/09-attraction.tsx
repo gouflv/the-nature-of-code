@@ -1,5 +1,6 @@
 import { SketchProps } from 'react-p5'
 import { P5Render } from '../../components/P5Render'
+import { BaseMover } from '../commons/baseMover'
 
 function createDrawer(): SketchProps {
   let p: P5
@@ -27,12 +28,13 @@ function createDrawer(): SketchProps {
     }
   }
 
-  class Mover {
+  class Mover extends BaseMover {
     size = 10
     velocity = p.createVector(0, 4)
     acc: Vector = p.createVector()
 
     constructor(public mass: number, public location: Vector) {
+      super()
       this.size = this.mass * 10
     }
 

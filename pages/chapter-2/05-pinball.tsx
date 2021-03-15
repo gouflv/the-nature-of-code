@@ -1,5 +1,6 @@
 import { SketchProps } from 'react-p5'
 import { P5Render } from '../../components/P5Render'
+import { BaseMover } from '../commons/baseMover'
 
 function createDrawer(): SketchProps {
   let p: P5
@@ -7,13 +8,14 @@ function createDrawer(): SketchProps {
   const G = 9.8,
     S = 0.95
 
-  class Ball {
+  class Ball extends BaseMover {
     size = 10
     location = p.createVector(20, 20)
     velocity = p.createVector()
     acc: Vector = p.createVector()
 
     constructor(public mass: number) {
+      super()
       this.size = this.mass
     }
 
