@@ -64,10 +64,15 @@ function createDrawer(): SketchProps {
       angles = splitPie(6)
       pieChart(400, angles)
     },
-    keyPressed: () => {
+    mouseClicked: () => {
       p.redraw()
     }
   }
 }
 
-export default P5Render(createDrawer)
+export default P5Render(
+  createDrawer,
+  <div className='tip'>
+    类似红包分配，可以保证每个切分结果在数值范围内。点击刷新。
+  </div>
+)

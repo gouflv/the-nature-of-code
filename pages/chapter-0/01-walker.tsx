@@ -34,4 +34,7 @@ function createDrawer(): SketchProps {
   }
 }
 
-export default P5Render(createDrawer)
+export default P5Render(
+  createDrawer,
+  <div className='tip'>相同趋势的四向游走</div>
+)

@@ -43,4 +43,7 @@ function createDrawer(): SketchProps {
   }
 }
 
-export default P5Render(createDrawer)
+export default P5Render(
+  createDrawer,
+  <div className='tip'>有概率的向鼠标方向游走</div>
+)
