@@ -9,23 +9,25 @@ function createDrawer(): SketchProps {
     constructor(location: Vector) {
       super()
       this.location = location
-      this.aAcc = 0.001
     }
     update() {
-      this.aVelocity = p.constrain(this.aVelocity + this.aAcc, 0, 0.2)
-      this.angle += this.aVelocity
+      this.velocity = p.createVector(
+        p.mouseX - this.location.x,
+        p.mouseY - this.location.y
+      )
+      this.angle = this.velocity.heading()
     }
     display() {
       p.push()
       //
-      p.fill(175)
-      p.stroke(0)
-      p.rectMode(p.CENTER)
+      p.stroke(100)
+      p.strokeWeight(10)
+
       p.translate(this.location.x, this.location.y)
+      p.rectMode(p.CENTER)
       p.rotate(this.angle)
-      p.line(-50, 0, 50, 0)
-      p.ellipse(50, 0, 8, 8)
-      p.ellipse(-50, 0, 8, 8)
+
+      p.line(0, 0, 50, 0)
       //
       p.pop()
     }
