@@ -9,11 +9,15 @@ function createDrawer(): SketchProps {
     constructor(location: Vector) {
       super()
       this.location = location
-      this.aAcc = 0.001
+      this.angleAcc = 0.001
     }
     update() {
-      this.aVelocity = p.constrain(this.aVelocity + this.aAcc, 0, 0.2)
-      this.angle += this.aVelocity
+      this.angleVelocity = p.constrain(
+        this.angleVelocity + this.angleAcc,
+        0,
+        0.2
+      )
+      this.angle += this.angleVelocity
     }
     display() {
       p.push()
